@@ -19,12 +19,12 @@ chrome_options.binary_location = "/usr/bin/chrome_binary"  # Replace with the ac
 webdriver_path = "/home/programish/chromedriver"  # Replace with your actual path
 
 # Load the web page
-df = pd.read_excel("Blackcoffer/Input.xlsx")
-master = pd.read_fwf("Blackcoffer/MasterDictionary/positive-words.txt", header=None, encoding='latin-1')
+df = pd.read_excel("Input.xlsx")
+master = pd.read_fwf("MasterDictionary/positive-words.txt", header=None, encoding='latin-1')
 positive = list(master[0])
-master = pd.read_fwf("Blackcoffer/MasterDictionary/negative-words.txt", header=None, encoding='latin-1')
+master = pd.read_fwf("MasterDictionary/negative-words.txt", header=None, encoding='latin-1')
 negative = list(master[0])
-path = '/home/programish/Blackcoffer/StopWords'
+path = '/home/StopWords'
 dir_list = os.listdir(path)
 my_stopwords = list()
 
@@ -160,4 +160,4 @@ for link in df.URL:
     res_df.loc[res_df.URL==link, 'PERSONAL PRONOUNS'] = pronouns
     res_df.loc[res_df.URL==link, 'AVG WORD LENGTH'] = round(total_char/len(sentence), 2)
 
-res_df.to_csv('Output Blackcoffer.csv')
+res_df.to_csv('Output.csv')
