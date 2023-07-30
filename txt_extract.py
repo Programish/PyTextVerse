@@ -16,7 +16,7 @@ chrome_options.add_argument("--headless")  # Ensure GUI is off
 chrome_options.binary_location = "/usr/bin/chrome_binary"  # Replace with the actual path
 
 # Set path to the chromedriver executable
-webdriver_path = "/home/programish/chromedriver"  # Replace with your actual path
+webdriver_path = "/home/chromedriver"  # Replace with your actual path
 
 # Load the web page
 df = pd.read_excel("Input.xlsx")
